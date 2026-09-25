@@ -74,3 +74,25 @@ If your laptop lacks a built-in HDMI port and your TV is not a Smart TV, here ar
 ### Option C: Apple TV / AirPlay Streaming Stick
 - **Equipment**: Apple TV box or an AirPlay-compatible streaming dongle plugged into the TV's HDMI port.
 - **Setup**: Click **Control Center** in your Mac menu bar (top right) ➔ **Screen Mirroring** ➔ Select your Apple TV.
+
+---
+
+## 🌙 Preventing Screensaver & Display Sleep
+
+To ensure your Mac screen never dims, locks, or goes into screensaver mode during a presentation:
+
+### 1. Automatic Web Screen Wake Lock (Built-in)
+The app now automatically requests a **Screen Wake Lock** via the browser whenever `index.html` is open. Keep the browser tab visible and active.
+
+### 2. Built-in Mac Terminal Command (`caffeinate`)
+macOS includes a built-in keep-awake tool called `caffeinate`. You can run it alongside your web server:
+```bash
+caffeinate -d
+```
+*(This prevents the display from sleeping for as long as Terminal is open).*
+
+### 3. macOS System Settings
+1. Open **System Settings** on your Mac.
+2. Go to **Lock Screen**.
+3. Set **Turn display off on power adapter when inactive** ➔ **Never**.
+4. Set **Start Screen Saver when inactive** ➔ **Never**.

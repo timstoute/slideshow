@@ -364,6 +364,24 @@
         showSlide();
       }
 
+      // Screen Wake Lock API (Prevents macOS screensaver & display sleep)
+      let wakeLock = null;
+      async function requestWakeLock() {
+        try {
+          if ('wakeLock' in navigator) {
+            wakeLock = await navigator.wakeLock.request('screen');
+          }
+        } catch (err) {
+          console.warn('Wake Lock error:', err);
+        }
+      }
+
+      document.addEventListener('visibilitychange', () => {
+        if (wakeLock !== null && document.visibilityState === 'visible') {
+          requestWakeLock();
+        }
+      });
+
       // Initialize
       window.addEventListener('DOMContentLoaded', () => {
         const savedUrl = localStorage.getItem('signage_csv_url') || DEFAULT_SHEET_URL;
@@ -374,6 +392,9 @@
 
         const savedFit = localStorage.getItem('signage_fit') || 'contain';
         changeImageFit(savedFit);
+
+        // Request screen wake lock
+        requestWakeLock();
 
         // Auto fetch default images & text
         loadDefaultImages();
