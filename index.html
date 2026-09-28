@@ -532,7 +532,7 @@
             `Opening <code>index.html</code> directly from macOS Finder (<code>file://</code> protocol) causes Safari/Chrome to block cross-origin redirects from Google Sheets.<br><br>` +
             `<strong style="color: #64b5f6;">Recommended Fix (Run Local Web Server):</strong><br>` +
             `1. Open Terminal on your Mac.<br>` +
-            `2. Run: <code>cd ${window.location.pathname.replace('/index.html', '')} && python3 -m http.server 8000</code><br>` +
+            `2. Run: <code>cd path/to/slideshow && python3 -m http.server 8000</code><br>` +
             `3. Open Safari to: <a href="http://localhost:8000" target="_blank" style="color: #64b5f6; font-weight: bold;">http://localhost:8000</a><br><br>` +
             `<small style="color: #aaa;">Or click <strong>Local CSV</strong> in Settings [C] to upload a downloaded <code>.csv</code> file.</small>`
           );

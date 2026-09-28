@@ -13,7 +13,7 @@ Running a lightweight local web server is the most reliable way to run the slide
 1. Open **Terminal** on your Mac.
 2. Run the following command:
    ```bash
-   cd /Users/[path]/Projects/slideshow && python3 -m http.server 8000
+   cd path/to/slideshow && python3 -m http.server 8000
    ```
 3. Open your browser to: **[http://localhost:8000](http://localhost:8000)**
 
