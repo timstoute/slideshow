@@ -13,7 +13,7 @@ Running a lightweight local web server is the most reliable way to run the slide
 1. Open **Terminal** on your Mac.
 2. Run the following command:
    ```bash
-   cd /Users/timstoute/Projects/slideshow && python3 -m http.server 8000
+   cd /Users/[path]/Projects/slideshow && python3 -m http.server 8000
    ```
 3. Open your browser to: **[http://localhost:8000](http://localhost:8000)**
 
@@ -26,10 +26,6 @@ Create a Google Sheet with 2 columns:
 - **Column A**: `Title`
 - **Column B**: `Subtitle`
 
-**Currently Configured Google Sheet CSV URL:**
-```
-https://docs.google.com/spreadsheets/d/e/2PACX-1vRE0zA9CCIbNCvq0iVxrA24CKg9aud-IJ-h6UkN2BtcVc0zADwi0bs9QoZvFwhu9bowJafPeleHnTNA/pub?output=csv
-```
 
 **Publishing Your Own Sheet to Web:**
 1. Click **File** ➔ **Share** ➔ **Publish to web**.
